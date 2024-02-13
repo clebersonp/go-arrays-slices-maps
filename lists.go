@@ -25,4 +25,16 @@ func main() {
 	featuredPrices := prices[1:3]
 	fmt.Printf("Featured Prices Type: %T, elements: %v\n", featuredPrices, featuredPrices)
 
+	// create a slice by variation of its positions
+	// array[1:] => from element of index 1 until the last one
+	// array[:1] => from first element until index 1 (excluded) -1 = 0
+	// array[:] => all elements of an array
+	// array[:len(array)] => all elements of an array, it's variation of array[:]
+	anotherFeaturedPrices := prices[1:]
+	fmt.Println(anotherFeaturedPrices)
+
+	// slice from a slice
+	highLightedPrices := anotherFeaturedPrices[:1]
+	fmt.Println(highLightedPrices)
+
 }

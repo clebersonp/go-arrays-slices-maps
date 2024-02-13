@@ -17,6 +17,11 @@ func main() {
 	// Go has not a built-in function to remove elements from slice(array), we need to use with position feature [:]
 	prices = prices[1:] // removing the first (0 - zero) element and returning a new slice(array)
 	fmt.Printf("Removed an element: %v\n", prices)
+
+	discountPrices := []float64{101.99, 80.99, 20.59}
+	// the operator "..." after a slices means "unpack slices"
+	prices = append(prices, discountPrices...)
+	fmt.Printf("Prices after added discounts: %v\n", prices)
 }
 
 //func main() {

@@ -37,4 +37,19 @@ func main() {
 	highLightedPrices := anotherFeaturedPrices[:1]
 	fmt.Println(highLightedPrices)
 
+	fmt.Println("-----------------------")
+	featuredPrices = prices[1:]
+	// slices override the original array value because slices just are pointer of an array range or window of values
+	featuredPrices[0] = 199.99
+	highLightedPrices = featuredPrices[:1]
+	fmt.Println(highLightedPrices)
+	fmt.Println(prices)
+	fmt.Println(len(highLightedPrices), cap(highLightedPrices))
+
+	// highLightedPrices has only a pointer of one element (len()) but Go memorize the original capacity (cap())
+	// therefore we can create another slices looking forwards in capacity and create a slices "greater than" the last one
+	highLightedPrices = highLightedPrices[:3]
+	fmt.Println(highLightedPrices)
+	fmt.Println(len(highLightedPrices), cap(highLightedPrices))
+
 }

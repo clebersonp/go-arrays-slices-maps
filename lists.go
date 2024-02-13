@@ -17,7 +17,12 @@ func main() {
 
 	// an empty array can't insert into any element later
 	var countryNames []string
-	fmt.Println(countryNames)
+	fmt.Printf("Country Names: %v\n", countryNames)
 	//countryNames[0] = "Brazil" // panic: runtime error: index out of range [0] with length 0
+
+	// slices: create a slice from an array. Slices is a subset of an array elements
+	// first element is included position and the second one is excluded
+	featuredPrices := prices[1:3]
+	fmt.Printf("Featured Prices Type: %T, elements: %v\n", featuredPrices, featuredPrices)
 
 }

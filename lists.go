@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// To run this code in terminal: go run lists.go
+
 func main() {
 	// To create a dynamic list of slices we just need to omit its length in creation
 	prices := []float64{10.99, 8.99}

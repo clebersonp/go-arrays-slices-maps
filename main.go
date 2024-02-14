@@ -14,4 +14,13 @@ func main() {
 	userNames = append(userNames, "Mark")
 
 	fmt.Println(userNames)
+
+	fmt.Println("--------------------------")
+	// unlike make with slices, with map has only one int argument for initial capacity
+	courseRatings := make(map[string]float64, 4)
+	courseRatings["go"] = 4.7
+	courseRatings["react"] = 4.8
+	courseRatings["angular"] = 4.7
+
+	fmt.Println(courseRatings)
 }

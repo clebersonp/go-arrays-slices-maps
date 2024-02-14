@@ -30,4 +30,17 @@ func main() {
 	courseRatings["angular"] = 4.7
 
 	courseRatings.output()
+
+	fmt.Println("--------------------------")
+	fmt.Println("For loops to maps and slices")
+	for i, item := range userNames {
+		fmt.Println("Index:", i)
+		fmt.Println("Item:", item)
+	}
+	fmt.Println("")
+
+	for key, value := range courseRatings {
+		fmt.Println("Key:", key)
+		fmt.Println("Value:", value)
+	}
 }
